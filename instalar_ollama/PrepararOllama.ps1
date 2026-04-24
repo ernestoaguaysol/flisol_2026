@@ -48,5 +48,5 @@ $linea1, $linea2, $linea_host, $linea3, $linea4, $linea_aviso, $linea5 | Out-Fil
 Write-Host "[OK] Lanzador creado en $lanzadorPath" -ForegroundColor Green
 
 Write-Host '--- INSTALACIÓN COMPLETADA ---' -ForegroundColor Cyan
-Write-Host 'Todo el entorno, binarios y modelos están ocultos de forma segura.' -ForegroundColor Magenta
+Write-Host 'Todo el entorno, binarios y carpetas para modelos fueron instalados correctamente.' -ForegroundColor Magenta
 Write-Host 'Para usar Ollama tras reiniciar, ejecuta el archivo Iniciar_Ollama.ps1' -ForegroundColor White
