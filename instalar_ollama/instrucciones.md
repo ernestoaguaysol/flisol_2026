@@ -13,16 +13,16 @@ Ejecutar el script:
 ```
 .\PrepararOllama.ps1
 ```
+> [!WARNING]
+> Si da error de ejecución, usa primero: 
+>
+>```
+>Set-ExecutionPolicy Bypass -Scope Process
+>```
 
-Si da error de ejecución, usa primero: 
+Si se reinicia la PC, desde el administrador de tareas chequear que no esté el proceso de ollama y ollama app ejecutándose ya que por defecto toma la ruta C:\User\\.ollama, si está ejecutándose entonces hay que **Finalizar tarea** antes de ejecutar el siguiente script.
 
-```
-Set-ExecutionPolicy Bypass -Scope Process
-```
-
-Si se reinicia la PC, desde el administrador de tareas chequear que no esté el proceso de ollama y ollama app ejecutándose ya que por defecto toma la ruta C:\User\.ollama, si está ejecutándose entonces hay que **Finalizar tarea** antes de ejecutar el siguiente script.
-
-Ir hasta al directorio donde se encuentra flisol
+Ir hasta al directorio donde se encuentra flisol.
 
 Ejecutar el script: .\Iniciar_Ollama.ps1
 
@@ -42,9 +42,12 @@ $env:OLLAMA_INSTALL_DIR="D:\Ollama"; $env:OLLAMA_MODELS="D:\OllamaModels"; $env:
 
 ## Descargar y ejecutar modelos
 
+```
 ollama run llama3.1:8b
+```
 
-> Más modelos en https://ollama.com/search
+> [!NOTE] 
+> Más modelos en https://ollama.com/library
 
 ## WSL
 
