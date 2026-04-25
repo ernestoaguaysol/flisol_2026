@@ -112,3 +112,25 @@ ollama ps
 # Borrar un modelo que ya no uses
 ollama rm sysadmin_grumpy
 ```
+
+---
+
+# Consumiendo Ollama desde la API REST (Bonus Track)
+
+Ollama no es solo una herramienta de consola. Cuando lo instalas, levanta silenciosamente un servidor local en el puerto `11434`. Esto significa que puedes hablarle a tu modelo desde cualquier lenguaje de programación (Python, Node.js, Bash) mediante simples peticiones HTTP.
+
+Vamos a hacer una prueba rápida usando `curl`.
+
+### Consultando a nuestro SysAdmin personalizado
+
+Abre otra terminal y ejecuta el siguiente comando. 
+
+*Nota: Usamos `"stream": false` para que Ollama espere a tener la respuesta completa antes de enviarla, lo que hace que sea más fácil de leer en la consola.*
+
+```bash
+curl -X POST http://localhost:11434/api/generate -H "Content-Type: application/json" -d '{
+  "model": "sysadmin_grumpy",
+  "prompt": "Se me cayó el servidor web y no sé por dónde empezar a mirar, ¿qué hago?",
+  "stream": false
+}'
+```
